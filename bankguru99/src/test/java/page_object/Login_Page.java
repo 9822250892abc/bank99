@@ -35,7 +35,7 @@ public Login_Page(WebDriver driver) {
 	@FindBy(xpath  = "//input[@name='btnReset']")
 	WebElement Reset;
 	
-	
+	//logo
 	
 	public boolean verifybankguru99logo() {
 		try {
@@ -47,6 +47,7 @@ public Login_Page(WebDriver driver) {
 		return false;
 		}
 
+	//userId
 	
 	public void EnteruserID(String userid) {
 		try {
@@ -66,6 +67,8 @@ public Login_Page(WebDriver driver) {
 		}
 		return null;
 	}
+	
+	//password
 	
 	public String verifyTextPass() {
 		try {
@@ -87,12 +90,16 @@ public Login_Page(WebDriver driver) {
 		}}
 	
 	
+	//clickbtn
+	
 	public void clickLoginbtn() {
 		btnLogin.click();
 		
 	}
 	
-	public String shoeMsg() {
+	//after login wel msg
+	
+	public String showMsg() {
 		try {
 		return	Welcomemsg.getText();
 		}
@@ -102,6 +109,8 @@ public Login_Page(WebDriver driver) {
 		return null;
 		
 	}
+	
+	//for invalid credential
 	
 	public String popUpMsg() {
 	
@@ -115,6 +124,8 @@ public Login_Page(WebDriver driver) {
 		
 	}
 	
+	//click popup btn
+	
 	public void popUpOkBtn() {
 		
 		try {
@@ -125,6 +136,9 @@ public Login_Page(WebDriver driver) {
 		
 		
 	}
+	
+	
+	//reset btn
 	
       public void buttonReset() {
 	     Reset.click();

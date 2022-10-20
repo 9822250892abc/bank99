@@ -41,7 +41,7 @@ public class Test_Case01 extends Test_Base {
 	lp.EnterPass("ynUtemE");
 		lp.clickLoginbtn();
 
-		if (lp.shoeMsg().equals("Welcome To Manager's Page of Guru99 Bank")) {
+		if (lp.showMsg().equals("Welcome To Manager's Page of Guru99 Bank")) {
 		 
 			Assert.assertTrue(true);
 			System.out.println("Login Susses...");
