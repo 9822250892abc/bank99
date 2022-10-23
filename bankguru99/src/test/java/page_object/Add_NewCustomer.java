@@ -14,7 +14,7 @@ public class Add_NewCustomer {
 	
 	public Add_NewCustomer(WebDriver driver) {
 		
-		this.driver=driver;
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		}
 
@@ -27,7 +27,7 @@ public class Add_NewCustomer {
 	@FindBy(xpath = "//input[@value='m']")
 	WebElement GenderMale;
 	
-	@FindBy(xpath = "//input[@value='m']")
+	@FindBy(xpath = "//input[@value='f']")
 	WebElement GenderFemale;
 	
 	@FindBy(xpath="//input[@id='dob']")
@@ -67,8 +67,15 @@ public class Add_NewCustomer {
 	@FindBy(xpath = "//p[normalize-space()='Customer Registered Successfully!!!']")
 	WebElement customerregistered;
 	
+	@FindBy(linkText = "Continue")
+	WebElement count;
+	
+	@FindBy(xpath = "//input[@name='res']")
+	WebElement btnreset;
 	
 	
+	
+	//add customer info
 	
 	public void txtCustomername(String costomername) {
 		try {
@@ -179,6 +186,8 @@ public class Add_NewCustomer {
 		}}
 	
 	
+	//submit button
+	
 	public void btnSubmit() {
 		try {
 			sub.click();
@@ -187,7 +196,7 @@ public class Add_NewCustomer {
 			e.getStackTrace();
 		}}
 	
-	
+	//add customer msg
 	public String showMssg() {
 		try {
 		return	addcustmsg.getText();
@@ -199,8 +208,7 @@ public class Add_NewCustomer {
 		
 	}
 	
-	
-
+    //add customer sussesfully done msg
 	public String sussesfullDone() {
 		try {
 		return	customerregistered.getText();
@@ -211,5 +219,29 @@ public class Add_NewCustomer {
 		return null;
 		
 	}
+	
+	
+     //after sussesfully done continue
+	public void linkbtnCountinue() {
+		try {
+			count.click();
+		}
+		catch (Exception e) {
+			e.getStackTrace();
+		}}
+	
+	//reset btn in addnew customer form
+	public void btnReset() {
+		try {
+			btnreset.click();
+		}
+		catch (Exception e) {
+			e.getStackTrace();
+		}}
+	
+
+	
+	
+	
 
 }

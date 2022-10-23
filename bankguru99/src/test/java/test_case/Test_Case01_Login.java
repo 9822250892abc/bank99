@@ -5,8 +5,9 @@ import org.testng.annotations.Test;
 
 import page_object.Login_Page;
 import test_base.Test_Base;
+import utility.Helper;
 
-public class Test_Case01 extends Test_Base {
+public class Test_Case01_Login extends Test_Base {
 	
 	Login_Page lp;
 	
@@ -25,7 +26,7 @@ public class Test_Case01 extends Test_Base {
 			
 			
 			System.out.println("bankguru99 Logo is displayed on login page");
-			
+			Helper.captureScreenshot(driver);
 		} else {
 			System.out.println("bankguru99 Logo is not displayed on login page");
 			
@@ -45,6 +46,7 @@ public class Test_Case01 extends Test_Base {
 		 
 			Assert.assertTrue(true);
 			System.out.println("Login Susses...");
+			Helper.captureScreenshot(driver);
 		} else {
 			Assert.assertTrue(false);
 			System.out.println("Login fail....");
