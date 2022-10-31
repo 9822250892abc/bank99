@@ -5,7 +5,6 @@ import java.util.concurrent.TimeUnit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.vtechsolution01.orangehrm.utility.ConstantVarriable;
 import com.vtechsolution01.orangehrm.utility.ExcelDataProvider;
 
 import page_object.Add_NewCustomer;
@@ -13,7 +12,6 @@ import page_object.Edit_Customer;
 import page_object.Login_Page;
 import page_object.Menu_Click_Event;
 import test_base.Test_Base;
-import utility.ConfigDataProvider;
 import utility.Helper;
 
 public class Test_Case04_ExcelData extends Test_Base {
@@ -47,7 +45,6 @@ public class Test_Case04_ExcelData extends Test_Base {
 	}
 	
 	
-
 	@Test(priority=2)
 	public void verifyForm()  {
 		me= new Menu_Click_Event(driver);
@@ -66,16 +63,16 @@ public class Test_Case04_ExcelData extends Test_Base {
 		
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
-		cust.txtCustomername(utility.ExcelDataProvider.getStringCellData(1,0,1));
+		cust.txtCustomername(utility.ExcelDataProvider.getStringCellData(1,2,0));
 		cust.rb1GenderM();
 		
-		cust.txtDateofBirth(utility.ExcelDataProvider.getStringCellData(1, 1, 1));
-		cust.txtAddress(utility.ExcelDataProvider.getStringCellData(1,2,1));
-		cust.txtCity(utility.ExcelDataProvider.getStringCellData(1,3,1));
-		cust.txtState(utility.ExcelDataProvider.getStringCellData(1,4,1));
+		cust.txtDateofBirth(utility.ExcelDataProvider.getStringCellData(1, 2, 1));
+		cust.txtAddress(utility.ExcelDataProvider.getStringCellData(1,2,2));
+		cust.txtCity(utility.ExcelDataProvider.getStringCellData(1,2,3));
+		cust.txtState(utility.ExcelDataProvider.getStringCellData(1,2,4));
 		cust.txtPincode("411043");
 		cust.txtTelephone("9763400000");
-		cust.txtEmailID(utility.ExcelDataProvider.getStringCellData(1,7,1));
+		cust.txtEmailID(utility.ExcelDataProvider.getStringCellData(1,2,7));
 		cust.txtCustomerPass("123456789");
 		
 	

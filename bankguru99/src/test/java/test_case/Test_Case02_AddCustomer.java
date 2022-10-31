@@ -22,8 +22,8 @@ public class Test_Case02_AddCustomer extends Test_Base {
 		
 		lp=new Login_Page(driver);
 
-		lp.EnteruserID("mngr448494");
-	    lp.EnterPass("ynUtemE");
+		lp.EnteruserID("mngr450516");
+	    lp.EnterPass("rugerUg");
 		lp.clickLoginbtn();
 
 		if (lp.showMsg().equals("Welcome To Manager's Page of Guru99 Bank")) {
@@ -63,7 +63,7 @@ public class Test_Case02_AddCustomer extends Test_Base {
 		cust.txtState("Maharashtra");
 		cust.txtPincode("411043");
 		cust.txtTelephone("9763400000");
-		cust.txtEmailID("shamkumar90@gmail.com");
+		cust.txtEmailID("shhamkumar90@gmail.com");
 		cust.txtCustomerPass("123456789");
 		
 	//	driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -92,7 +92,7 @@ public class Test_Case02_AddCustomer extends Test_Base {
 		cust.txtState("Maharashtra");
 		cust.txtPincode("411043");
 		cust.txtTelephone("9763400000");
-		cust.txtEmailID("shaamkumar90@gmail.com");
+		cust.txtEmailID("shaaaamkumar90@gmail.com");
 		cust.txtCustomerPass("123456789");
 		
 		cust.btnReset();

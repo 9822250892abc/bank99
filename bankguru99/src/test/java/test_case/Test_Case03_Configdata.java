@@ -2,8 +2,6 @@ package test_case;
 
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

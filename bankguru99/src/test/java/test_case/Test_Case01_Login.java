@@ -38,8 +38,8 @@ public class Test_Case01_Login extends Test_Base {
 	@Test(priority = 6)
 	public void loginTest() {
 
-		lp.EnteruserID("mngr448494");
-	lp.EnterPass("ynUtemE");
+		lp.EnteruserID("mngr450516");
+	lp.EnterPass("rugerUg");
 		lp.clickLoginbtn();
 
 		if (lp.showMsg().equals("Welcome To Manager's Page of Guru99 Bank")) {

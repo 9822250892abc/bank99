@@ -1,7 +1,5 @@
 package page_object;
 
-import javax.xml.xpath.XPath;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
